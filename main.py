@@ -12,6 +12,7 @@ import math
 hill_type = str(input("Which hill type did you ski on? Normal or Large?" ))
 speed = float(input("What was your speed?"))
 
+#Define par, points, and height
 par = 0
 points_per_meter = 0
 height = 0
@@ -40,10 +41,11 @@ distance = speed * time_in_air
 # Calculate Points Earned
 points_earned = 60 + (distance - par) * points_per_meter
 
+#Round up distance and points earned
 distance = math.ceil(distance)
 points_earned = math.ceil(points_earned)
 
-
+#Determine output message.
 if points_earned >= 61:
     print("Great job for doing better than par!")
 elif points_earned > 10:
@@ -51,6 +53,7 @@ elif points_earned > 10:
 else:
     print("Sorry you didn't go very far.")
 
+#Output distance and points earned
 print("You traveled", distance,".")
 
 print("Your points are", points_earned,".")

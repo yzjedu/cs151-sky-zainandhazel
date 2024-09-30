@@ -33,13 +33,13 @@ else:
     print("Invalid hill type")
 
  # Calculate Time in Air
-time_in_air = math.sqrt((2 * height) / 9.8)
+time_in_air = (math.sqrt(2 * height) / 9.8)
 
 # Calculate Distance
 distance = speed * time_in_air
 
 # Calculate Points Earned
-points_earned = 60 + (distance - par) * points_per_meter
+points_earned = (60 + (distance - par) )* points_per_meter
 
 #Round up distance and points earned
 distance = math.ceil(distance)

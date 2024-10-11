@@ -19,9 +19,9 @@ height = 0
 
   #Determine par and points per meter based off of hill type.
 if hill_type == "Normal" :
-      par = 90
-      points_per_meter = 2
-      height = 46
+    par = 90
+    points_per_meter = 2
+    height = 46
 
 
 elif hill_type == "Large" :
@@ -33,13 +33,15 @@ else:
     print("Invalid hill type")
 
  # Calculate Time in Air
-time_in_air = (math.sqrt(2 * height) / 9.8)
+ # adjusted by prof zee
+time_in_air = math.sqrt((2 * height) / 9.8)
 
 # Calculate Distance
 distance = speed * time_in_air
 
 # Calculate Points Earned
-points_earned = (60 + (distance - par) )* points_per_meter
+# adjusted by prof zee
+points_earned = 60 + (distance - par) * points_per_meter
 
 #Round up distance and points earned
 distance = math.ceil(distance)
